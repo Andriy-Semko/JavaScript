@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приклади JavaScript</title>
+</head>
+<body>
+    <h2>Приклади JavaScript</h2>
+
+    <p>JavaScript може дізнаватися дату та час.</p>
+    <button type="button" onclick="document.getElementById('time').innerHTML = Date()"> Click me to display Date and Time.</button>
+    <p id="time"></p>
+    <hr>
+
+    <p>JavaScript може спілкуватись з користувачем.</p>
+    <button type="button" onclick="hello()">Давай знайомитись</button>
+    <hr>
+
+    <p id="content">JavaScript може змінювати HTML контент.</p>
+    <button type="button" onclick='document.getElementById("content").innerHTML = "Привіт JavaScript!"'>Click Me!</button>
+    <hr>
+
+    <p id="content2">JavaScript може змінювати стилі HTML елементів.</p>
+    <button type="button" onclick="document.getElementById('content2').style.color='red'">Click Me!</button>
+    <hr>
+
+    <p>JavaScript може ховати та показувати HTML елементи</p>
+    <p id="content3" style="display:none">Hello JavaScript!</p>
+    <button type="button" onclick="hideShowElement()">Click Me!</button>
+
+    <script>
+        function hideShowElement() {
+            const status=document.getElementById('content3').style.display === 'none' ? 'block' : 'none';
+            document.getElementById('content3').style.display=status;
+        }
+        function hello() {
+            const name = prompt("Мене звати JavaScript. А тебе?");
+            if (!!name) {
+                alert(`Приємно познайомитись, ${name}`);
+            }
+        }
+    </script>
+</body>
+</html>
